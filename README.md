@@ -1,23 +1,25 @@
-一个cloudflare worker反代emby的脚本
+**A cloudflare worker script to reverse pro*xy emby**
 
-    登录 Cloudflare 并创建一个新的 Worker:
-        登录到你的 Cloudflare 账户。
-        导航到 “Workers & Pages”。
-        点击 “Create a Service” 来创建一个新的 Worker 服务。
-        给你的 Worker 起一个名字，并选择 “HTTP handler”。
+Log into Cloudflare and create a new Worker: 
+ Log into your Cloudflare account.
+    Navigate to “Workers & Pages”.
+    Click “Create a Service” to create a new worker service.
+    Give your worker a name and select “HTTP handler”.
 
-    编写 Worker 脚本:
-        在 Worker 编辑器中复制粘贴worker.js的代码
+Write the Worker script: 
+ Copy and paste the code of worker.js in the Worker editor.
 
-    部署 Worker:
-        保存并部署你的 Worker。
-        记下你的 Worker 的子域名（例如：your-worker.your-domain.workers.dev）。
+Deploy Worker: 
+ Save and deploy your worker. 
+ Make a note of your worker's subdomain (e.g. your-worker.your-domain.workers.dev).
 
-    配置 DNS:
-        在 Cloudflare 的 DNS 设置中，创建一个新的 CNAME 记录，指向你的 Worker 子域名。
-        例如，如果你希望通过 emby.your-domain.com 访问 Emby 服务器，可以创建一个 CNAME 记录：
-            名称：emby
-            目标：your-worker.your-domain.workers.dev
+Configure DNS: 
+ In Cloudflare's DNS settings, create a new CNAME record pointing to your Worker subdomain.
+    For example, if you want to access the Emby server via emby.your-domain.com, you can create a CNAME record: 
+ Name: emby 
+ Target: your-worker.your-domain.workers.dev
 
-    测试:
-        通过你配置的域名（例如：emby.your-domain.com）替换你的 Emby 服务器地址，确认代理功能正常工作。
+Test: 
+ Replace your Emby server address with your configured domain name (e.g., emby.your-domain.com) to confirm that the proxy function is working properly.
+
+Translated with DeepL.com (free version)
